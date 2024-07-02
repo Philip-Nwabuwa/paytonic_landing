@@ -17,7 +17,7 @@ const Simplify = () => {
           <ScrollAnimate>
             <div className="flex flex-col gap-6 items-center justify-center px-10 py-6">
               <h3 className="text-2xl font-bold">
-                Instant transfers made easy with Paytonic's user-friendly
+                Instant transfers made easy with Paytonic&apos;s user-friendly
                 interface
               </h3>
               <p className="text-gray-600">
@@ -32,8 +32,8 @@ const Simplify = () => {
           <ScrollAnimate>
             <div className="flex flex-col gap-6 items-center justify-center p-6">
               <h3 className="text-2xl font-bold">
-                Experience hassle-free bill payments with Paytonic's intuitive
-                features
+                Experience hassle-free bill payments with Paytonic&apos;s
+                intuitive features
               </h3>
               <p className="text-gray-600">
                 Paytonic provides a secure and convenient way to manage your
@@ -45,7 +45,8 @@ const Simplify = () => {
           <ScrollAnimate>
             <div className="flex flex-col gap-6 items-center justify-center p-6">
               <h3 className="text-2xl font-bold">
-                Enjoy seamless money transfers with Paytonic's reliable platform
+                Enjoy seamless money transfers with Paytonic&apos;s reliable
+                platform
               </h3>
               <p className="text-gray-600">
                 Paytonic offers quick and secure transactions for your peace of

@@ -9,15 +9,17 @@ import Footer from "@/components/common/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[120px]">
+    <main>
       <Navbar />
-      <Hero />
-      <BillsPayment />
-      <Simplify />
-      {/* <Team /> */}
-      <Testimonial />
-      <Cta />
-      <Footer />
+      <div className="flex flex-col gap-[120px]">
+        <Hero />
+        <BillsPayment />
+        <Simplify />
+        {/* <Team /> */}
+        <Testimonial />
+        <Cta />
+        <Footer />
+      </div>
     </main>
   );
 }
