@@ -50,7 +50,8 @@ const Hero = () => {
                     intent={"outlined"}
                     className="flex items-center gap-2"
                   >
-                    <p>Learn more</p> <MoveRight aria-hidden="true" />
+                    <p>Learn more</p>{" "}
+                    <MoveRight className="ml-2" aria-hidden="true" />
                   </Button>
                 </Link>
               </div>

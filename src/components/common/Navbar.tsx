@@ -1,31 +1,93 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Dialog,
   Popover,
   PopoverButton,
   PopoverPanel,
 } from "@headlessui/react";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import {
+  ChevronDown,
+  Menu,
+  Phone,
+  Cookie,
+  Scale,
+  CircleHelp,
+  Building2,
+  Send,
+  Wifi,
+  X,
+} from "lucide-react";
 
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import LogoDark from "@/assets/logo/Paytonic-dark-full.png";
+import POS from "@/assets/icon/point-sale.svg";
 import { Button } from "./Button";
 
-const solutions = [
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+type NavItemType = {
+  name: string;
+  description: string;
+  href: string;
+  icon?: IconComponent;
+  image?: StaticImageData;
+};
+
+const products: NavItemType[] = [
   {
-    name: "Analytics",
+    name: "Send Money",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: Send,
+  },
+  {
+    name: "Bills",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: Wifi,
+  },
+  {
+    name: "POS",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    image: POS,
+  },
+];
+const resources: NavItemType[] = [
+  {
+    name: "FAQs",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: CircleHelp,
+  },
+  {
+    name: "About us",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: Building2,
+  },
+  {
+    name: "Contact us",
     description: "Get a better understanding of your traffic",
     href: "#",
     icon: Phone,
   },
+];
+const policies: NavItemType[] = [
   {
-    name: "Analytics",
+    name: "Cookie Policy",
     description: "Get a better understanding of your traffic",
     href: "#",
-    icon: Phone,
+    icon: Cookie,
+  },
+  {
+    name: "Terms & Conditions",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: Scale,
   },
 ];
 
@@ -77,17 +139,72 @@ const Navbar = () => {
             >
               <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {solutions.map((item) => (
-                    <div key={item.name} className="grid grid-cols-2">
-                      <div
-                      
+                  {products.map((item) => (
+                    <div key={item.name}>
+                      <div className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                        <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          {item.icon ? (
+                            <item.icon className="h-6 w-6" aria-hidden="true" />
+                          ) : (
+                            item.image && (
+                              <Image
+                                src={item.image}
+                                alt={item.name}
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            )
+                          )}
+                        </div>
+                        <div>
+                          <a
+                            href={item.href}
+                            className="font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </a>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </PopoverPanel>
+          </Popover>
+          <Popover className="relative">
+            <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+              <span>Resources</span>
+              <ChevronDown className="h-5 w-5" aria-hidden="true" />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                <div className="p-4">
+                  {resources.map((item) => (
+                    <div
+                      key={item.name}
                       className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
                     >
                       <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
+                        {item.icon ? (
+                          <item.icon className="h-6 w-6 " aria-hidden="true" />
+                        ) : (
+                          item.image && (
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                          )
+                        )}
                       </div>
                       <div>
                         <a
@@ -100,7 +217,6 @@ const Navbar = () => {
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
-                    </div>
                   ))}
                 </div>
               </div>
@@ -108,7 +224,7 @@ const Navbar = () => {
           </Popover>
           <Popover className="relative">
             <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              <span>Company</span>
+              <span>Legal</span>
               <ChevronDown className="h-5 w-5" aria-hidden="true" />
             </PopoverButton>
 
@@ -118,55 +234,24 @@ const Navbar = () => {
             >
               <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  {solutions.map((item) => (
+                  {policies.map((item) => (
                     <div
                       key={item.name}
                       className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
                     >
                       <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div>
-                        <a
-                          href={item.href}
-                          className="font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </PopoverPanel>
-          </Popover>
-          <Popover className="relative">
-            <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              <span>Help</span>
-              <ChevronDown className="h-5 w-5" aria-hidden="true" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-                <div className="p-4">
-                  {solutions.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
-                    >
-                      <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
+                        {item.icon ? (
+                          <item.icon className="h-6 w-6 " aria-hidden="true" />
+                        ) : (
+                          item.image && (
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                          )
+                        )}
                       </div>
                       <div>
                         <a
@@ -186,8 +271,12 @@ const Navbar = () => {
           </Popover>
         </div>
         <div className="hidden lg:flex items-center gap-x-6">
-          <Button intent="outlined">Sign Up</Button>
-          <Button intent="primary">Login</Button>
+          <Link href={"https://main.d2olt434r74tow.amplifyapp.com/signup"}>
+            <Button intent="outlined">Sign Up</Button>
+          </Link>
+          <Link href={"https://main.d2olt434r74tow.amplifyapp.com/login"}>
+            <Button intent="primary">Login</Button>
+          </Link>
         </div>
       </div>
       <Dialog

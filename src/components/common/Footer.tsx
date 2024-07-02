@@ -4,12 +4,11 @@ import LogoLight from "@/assets/logo/Paytonic-light-full.png";
 
 const navigation = {
   Products: [
-    { name: "Cashpin™", href: "#" },
-    { name: "Virtual cards", href: "#" },
-    { name: "Payment Link for Business", href: "#" },
+    { name: "Send Money", href: "#" },
+    { name: "Bills", href: "#" },
+    { name: "POS", href: "#" },
   ],
   Resources: [
-    { name: "Blog post", href: "#" },
     { name: "FAQS", href: "#" },
     { name: "About Us", href: "#" },
     { name: "Contact Us", href: "#" },
@@ -17,14 +16,6 @@ const navigation = {
   company: [
     { name: "Privacy Policy", href: "#" },
     { name: "Terms & Conditions", href: "#" },
-    { name: "Cookies", href: "#" },
-    { name: "Information Security Policy", href: "#" },
-    { name: "Acceptable Usage Policy", href: "#" },
-  ],
-  legal: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
   ],
   social: [
     {
@@ -102,9 +93,11 @@ const navigation = {
 };
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
-      className="bg-gray-900 mt-[120px] max-width rounded-t-3xl"
+      className="bg-gray-900 mb-[120px] max-width rounded-3xl"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
@@ -150,30 +143,13 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Company
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">
-                  Legal
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -235,7 +211,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-            &copy; 2024 Paytonic. All rights reserved.
+            &copy; {currentYear} Paytonic. All rights reserved.
           </p>
         </div>
       </div>
