@@ -7,7 +7,7 @@ const Cta = () => {
     <section className="max-width">
       <div className="bg-[#fff] p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <div className="grid grid-cols-2 items-center gap-4">
+          <div className="grid lg:grid-cols-2 items-center gap-4">
             <h4 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl gradient-text">
               Seamless Financial Transactions Made Easy
             </h4>

@@ -1,12 +1,13 @@
 import Image from "next/image";
 
 import LogoLight from "@/assets/logo/Paytonic-light-full.png";
+import Link from "next/link";
 
 const navigation = {
   Products: [
-    { name: "Send Money", href: "#" },
-    { name: "Bills", href: "#" },
-    { name: "POS", href: "#" },
+    { name: "Send Money", href: "/send-money" },
+    { name: "Bills", href: "/bills" },
+    { name: "POS", href: "/pos" },
   ],
   Resources: [
     { name: "FAQS", href: "#" },
@@ -115,12 +116,12 @@ const Footer = () => {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.Products.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -132,12 +133,12 @@ const Footer = () => {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.Resources.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -151,12 +152,12 @@ const Footer = () => {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         className="text-sm leading-6 text-gray-300 hover:text-white"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -200,14 +201,15 @@ const Footer = () => {
         <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a
+              <Link
+                target="_blank"
                 key={item.name}
                 href={item.href}
                 className="text-gray-500 hover:text-gray-400"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
+              </Link>
             ))}
           </div>
           <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">

@@ -1,9 +1,9 @@
-import { Button } from "@/components/common/Button";
-import { ScrollAnimate } from "@/components/common/ScrollAnimate";
-import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import { MoveRight } from "lucide-react";
+
+import { Button } from "@/components/common/Button";
+import { ScrollAnimate } from "@/components/common/ScrollAnimate";
 
 const Send = () => {
   return (

@@ -39,19 +39,19 @@ type NavItemType = {
 const products: NavItemType[] = [
   {
     name: "Send Money",
-    description: "Get a better understanding of your traffic",
+    description: "Transfer money to friends and family",
     href: "/send-money",
     icon: Send,
   },
   {
     name: "Bills",
-    description: "Get a better understanding of your traffic",
+    description: "Pay your bills conveniently and securely",
     href: "/bills",
     icon: Wifi,
   },
   {
     name: "POS",
-    description: "Get a better understanding of your traffic",
+    description: "Accept payments with ease",
     href: "/pos",
     image: POS,
   },
@@ -59,19 +59,19 @@ const products: NavItemType[] = [
 const resources: NavItemType[] = [
   {
     name: "FAQs",
-    description: "Get a better understanding of your traffic",
+    description: "Questions and answers",
     href: "#",
     icon: CircleHelp,
   },
   {
     name: "About us",
-    description: "Get a better understanding of your traffic",
+    description: "Learn more about Paytonic",
     href: "#",
     icon: Building2,
   },
   {
     name: "Contact us",
-    description: "Get a better understanding of your traffic",
+    description: "Contact us for any questions",
     href: "#",
     icon: Phone,
   },
@@ -79,23 +79,16 @@ const resources: NavItemType[] = [
 const policies: NavItemType[] = [
   {
     name: "Cookie Policy",
-    description: "Get a better understanding of your traffic",
+    description: "Check our cookie policy",
     href: "#",
     icon: Cookie,
   },
   {
     name: "Terms & Conditions",
-    description: "Get a better understanding of your traffic",
+    description: "Check our terms and conditions",
     href: "#",
     icon: Scale,
   },
-];
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Resources", href: "#" },
-  { name: "Company", href: "#" },
 ];
 
 const Navbar = () => {
@@ -157,13 +150,13 @@ const Navbar = () => {
                           )}
                         </div>
                         <div>
-                          <a
+                          <Link
                             href={item.href}
                             className="font-semibold text-gray-900"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
-                          </a>
+                          </Link>
                           <p className="mt-1 text-gray-600">
                             {item.description}
                           </p>
@@ -207,13 +200,13 @@ const Navbar = () => {
                         )}
                       </div>
                       <div>
-                        <a
+                        <Link
                           href={item.href}
                           className="font-semibold text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -254,13 +247,13 @@ const Navbar = () => {
                         )}
                       </div>
                       <div>
-                        <a
+                        <Link
                           href={item.href}
                           className="font-semibold text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -290,7 +283,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <Link href="/" className="pt-3 mb-5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="/images/logo.png" alt="" />
+              <Image className="h-8 w-36" src={LogoDark} alt="Logo" />
             </Link>
             <button
               type="button"
@@ -303,23 +296,57 @@ const Navbar = () => {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="space-y-5 py-6">
+                <div>
+                  {products.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                <div>
+                  {resources.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                <div>
+                  {policies.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-              <div className="py-6">
+              <div className="w-full flex gap-8 py-6">
                 <Link
-                  href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="w-full"
+                  href={"https://main.d2olt434r74tow.amplifyapp.com/signup"}
                 >
-                  Log in
+                  <Button className="w-full" intent="outlined">
+                    Sign Up
+                  </Button>
+                </Link>
+                <Link
+                  className="w-full"
+                  href={"https://main.d2olt434r74tow.amplifyapp.com/login"}
+                >
+                  <Button className="w-full" intent="primary">
+                    Login
+                  </Button>
                 </Link>
               </div>
             </div>

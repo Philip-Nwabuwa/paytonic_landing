@@ -1,33 +1,34 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Faq = () => {
   const [faq, setFaq] = useState([
     {
-      question: "How to create an account?",
+      question: "How to pay bills?",
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        "To pay bills, simply log in to your Paytonic account, navigate to the bills section, select the bill you want to pay, and follow the prompts to complete the payment.",
       open: false,
     },
     {
-      question: "How can I make payment using Paypal?",
+      question: "Are there any fees?",
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        "Yes, there may be fees or discount depending on the type of bill payment. Please refer to our webapp for more information..",
       open: false,
     },
     {
-      question: "Can I cancel my plan?",
+      question: "What if I have issues with my bill payment?",
       answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+        "If you encounter any issues with your bill payment, please contact our customer support team for assistance. We are available 24/7 to help you.",
       open: false,
     },
-    {
-      question: "How can I reach to support?",
-      answer:
-        'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
-      open: false,
-    },
+    // {
+    //   question: "How can I reach to support?",
+    //   answer:
+    //     'Amet minim mollit non deserunt ullamco est sit <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:underline">aliqua dolor</a> do amet sint. Velit officia consequat duis enim velit mollit.',
+    //   open: false,
+    // },
   ]);
 
   const toggleFaq = (index: number) => {
@@ -45,14 +46,15 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
+    <section className="py-10 bg-white sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             Frequently Asked Questions
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+            Find answers to frequently asked questions about bill payments and
+            their resolutions.
           </p>
         </div>
 
@@ -102,14 +104,14 @@ const Faq = () => {
         </div>
 
         <p className="text-center text-gray-600 textbase mt-9">
-          Didn’t find the answer you are looking for?{" "}
-          <a
+          Didn&apos;t find the answer you are looking for?{" "}
+          <Link
             href="#"
             title=""
             className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
           >
             Contact our support
-          </a>
+          </Link>
         </p>
       </div>
     </section>

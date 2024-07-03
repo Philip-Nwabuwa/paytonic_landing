@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Field, Label, Switch } from "@headlessui/react";
 
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -177,9 +178,9 @@ const ContactForm = () => {
             </div>
             <Label className="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              <Link href="#" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
-              </a>
+              </Link>
               .
             </Label>
           </Field>
