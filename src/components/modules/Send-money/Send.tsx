@@ -4,6 +4,8 @@ import { MoveRight } from "lucide-react";
 
 import { Button } from "@/components/common/Button";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
+import sendMoney1 from "@/assets/images/send-money1.jpg";
+import sendMoney2 from "@/assets/images/send-money2.jpg";
 
 const Send = () => {
   return (
@@ -49,12 +51,20 @@ const Send = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image
+            src={sendMoney1}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
       </div>
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image
+            src={sendMoney2}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
         <div>
           <ScrollAnimate>
