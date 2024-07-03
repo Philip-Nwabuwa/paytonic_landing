@@ -57,12 +57,12 @@ const products: NavItemType[] = [
   },
 ];
 const resources: NavItemType[] = [
-  {
-    name: "FAQs",
-    description: "Questions and answers",
-    href: "#",
-    icon: CircleHelp,
-  },
+  // {
+  //   name: "FAQs",
+  //   description: "Questions and answers",
+  //   href: "#",
+  //   icon: CircleHelp,
+  // },
   {
     name: "About us",
     description: "Learn more about Paytonic",
@@ -80,13 +80,13 @@ const policies: NavItemType[] = [
   {
     name: "Cookie Policy",
     description: "Check our cookie policy",
-    href: "#",
+    href: "/cookie",
     icon: Cookie,
   },
   {
     name: "Terms & Conditions",
     description: "Check our terms and conditions",
-    href: "#",
+    href: "/terms",
     icon: Scale,
   },
 ];
