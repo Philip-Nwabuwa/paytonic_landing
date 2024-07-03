@@ -21,35 +21,35 @@ const testimonials = [
     id: 1,
     avatar: Male1,
     content: "Paytonic has made managing my bills so much easier!",
-    author: "Alex Johnson",
+    author: "Chinedu Okafor",
     job: "Software Engineer",
   },
   {
     id: 2,
     avatar: Male2,
     content: "I love how secure and user-friendly Paytonic is.",
-    author: "Brenda Lee",
+    author: "Olumide Adebayo",
     job: "Financial Analyst",
   },
   {
     id: 3,
     avatar: Male2,
     content: "With Paytonic, I can transfer money instantly and hassle-free.",
-    author: "Carlos Martinez",
+    author: "Emeka Nwosu",
     job: "Bank Teller",
   },
   {
     id: 4,
     avatar: Female1,
     content: "Paytonic's customer service is top-notch!",
-    author: "Diana King",
+    author: "Funke Adeola",
     job: "Customer Service Representative",
   },
   {
     id: 5,
     avatar: Male1,
     content: "Using Paytonic has simplified my financial life.",
-    author: "Edward Smith",
+    author: "Amina Musa",
     job: "Accountant",
   },
   {
@@ -57,7 +57,7 @@ const testimonials = [
     avatar: Female2,
 
     content: "Paytonic offers the best interest rates on savings.",
-    author: "Fiona Clark",
+    author: "Chioma Adichie",
     job: "Financial Advisor",
   },
   {
@@ -65,7 +65,7 @@ const testimonials = [
     avatar: Male1,
 
     content: "The budgeting tools in Paytonic are incredibly helpful.",
-    author: "George Adams",
+    author: "Yemi Ajayi",
     job: "Budget Analyst",
   },
   {
@@ -73,7 +73,7 @@ const testimonials = [
     avatar: Female1,
 
     content: "Paytonic's mobile app is very intuitive and easy to use.",
-    author: "Hannah Brown",
+    author: "Toyin Brown",
     job: "UX Designer",
   },
   {
@@ -82,7 +82,7 @@ const testimonials = [
 
     content:
       "I've never felt more in control of my finances thanks to Paytonic.",
-    author: "Isaac Green",
+    author: "Kelechi Obi",
     job: "Business Analyst",
   },
 ];

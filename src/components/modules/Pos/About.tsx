@@ -55,12 +55,12 @@ const About = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={pos1} alt="Bills" className="w-full h-full" />
+          <Image src={pos1} alt="Bills" className="w-full h-full rounded-3xl" />
         </ScrollAnimate>
       </div>
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <Image src={pos2} alt="Bills" className="w-full h-full" />
+          <Image src={pos2} alt="Bills" className="w-full h-full rounded-3xl" />
         </ScrollAnimate>
         <div>
           <ScrollAnimate>
