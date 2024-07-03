@@ -66,13 +66,13 @@ const resources: NavItemType[] = [
   {
     name: "About us",
     description: "Learn more about Paytonic",
-    href: "#",
+    href: "/about",
     icon: Building2,
   },
   {
     name: "Contact us",
     description: "Contact us for any questions",
-    href: "#",
+    href: "/contact",
     icon: Phone,
   },
 ];

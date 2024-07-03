@@ -1,8 +1,19 @@
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import Contact from "@/components/common/Contact";
+import Hero from "@/components/modules/Contact/Hero";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <main>
+      <Navbar />
+      <div className="flex flex-col gap-[120px]">
+        <Hero />
+        <Contact />
+        <Footer />
+      </div>
+    </main>
+  );
+};
 
-export default Contact
+export default ContactPage;

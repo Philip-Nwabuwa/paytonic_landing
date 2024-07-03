@@ -5,6 +5,7 @@ import { Field, Label, Switch } from "@headlessui/react";
 
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./Button";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -14,7 +15,7 @@ const ContactForm = () => {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="max-width isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -32,7 +33,7 @@ const ContactForm = () => {
           Contact sales
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          Have a question or feedback? We&apos;re here to help.
         </p>
       </div>
       <form
@@ -186,12 +187,9 @@ const ContactForm = () => {
           </Field>
         </div>
         <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Let&apos;s talk
-          </button>
+          <Button className="w-full" intent="primary">
+            Submit
+          </Button>
         </div>
       </form>
     </div>
