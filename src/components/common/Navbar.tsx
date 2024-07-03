@@ -40,19 +40,19 @@ const products: NavItemType[] = [
   {
     name: "Send Money",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/send-money",
     icon: Send,
   },
   {
     name: "Bills",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/bills",
     icon: Wifi,
   },
   {
     name: "POS",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/pos",
     image: POS,
   },
 ];

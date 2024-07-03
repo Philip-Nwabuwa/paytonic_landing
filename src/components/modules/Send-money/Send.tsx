@@ -1,42 +1,38 @@
-import Link from "next/link";
-
 import { Button } from "@/components/common/Button";
-import { MoveRight } from "lucide-react";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
+import { MoveRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
-import Security from "@/assets/images/Home/Cybersecurity.svg";
-import Bills from "@/assets/images/Home/Electronic-invoice.svg";
+import React from "react";
 
-const BillsPayment = () => {
+const Send = () => {
   return (
     <section className="w-full flex flex-col gap-10 max-width">
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <div>
           <ScrollAnimate>
             <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl gradient-text">
-              Pay Bills Effortlessly with Paytonic
+              Send Money Instantly to Bank Accounts
             </h2>
           </ScrollAnimate>
           <ScrollAnimate>
             <p className="mt-6 text-lg leading-6 text-gray-600">
-              Paytonic provides a quick and easy way to pay bills such as
-              airtime, data, electricity, and more. With our user-friendly web
-              app, you can conveniently manage all your payments in one place.
+              With Paytonic, you can transfer money to any Nigerian bank account
+              instantly and securely.
             </p>
           </ScrollAnimate>
           <ScrollAnimate className="mt-10 grid grid-cols-2 gap-10">
             <div className="flex flex-col gap-4">
-              <h3 className="text-xl font-black">Convenient</h3>
-              <p className="text-gray-500">
-                Pay airtime, data, electricity, and other bills with just a few
-                clicks.
+              <h3 className="text-xl font-black">Secure</h3>
+              <p>
+                Transfer money to Nigeria bank accounts with just a few taps on
+                your phone.
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h3 className="text-xl font-black">Secure</h3>
-              <p className="text-gray-500">
-                Rest assured that your payments are safe and protected with
-                Paytonic.
+              <h3 className="text-xl font-black">Convenient</h3>
+              <p>
+                Send money to friends and family in Nigeria anytime, anywhere.
               </p>
             </div>
             <div className="mt-10 flex items-center gap-x-6">
@@ -53,39 +49,38 @@ const BillsPayment = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={Bills} alt="Bills" className="w-full h-full" />
+          <Image src={""} alt="Bills" className="w-full h-full" />
         </ScrollAnimate>
       </div>
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <Image src={Security} alt="Bills" className="w-full h-full" />
+          <Image src={""} alt="Bills" className="w-full h-full" />
         </ScrollAnimate>
         <div>
           <ScrollAnimate>
             <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl gradient-text">
-              Secure and Convenient Money Transfers to Other Users
+              Transfer Money Easily with Paytonic
             </h2>
           </ScrollAnimate>
           <ScrollAnimate>
             <p className="mt-6 text-lg leading-6 text-gray-600">
-              With Paytonic, you can securely transfer money to other users in
-              Nigeria using their bank account or username. Enjoy hassle-free
-              transactions and peace of mind.
+              Send money to other Paytonic users using their username. It&apos;s
+              quick and hassle-free.
             </p>
           </ScrollAnimate>
           <ScrollAnimate className="mt-10 grid grid-cols-2 gap-10">
             <div className="flex flex-col gap-4">
-              <h3 className="text-xl font-black">Fast Transfers</h3>
-              <p className="text-gray-500">
-                Transfer money instantly to friends, family, or anyone in
-                Nigeria with just a few taps.
+              <h3 className="text-xl font-black">Secure Transfers</h3>
+              <p>
+                Transfer money securely to friends and family with just a
+                username.
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h3 className="text-xl font-black">Secure Payments</h3>
-              <p className="text-gray-500">
-                Rest assured that your transactions are protected with advanced
-                security measures.
+              <h3 className="text-xl font-black">Instant Payments</h3>
+              <p>
+                Experience instant payments when you send money to Paytonic
+                users.
               </p>
             </div>
             <div className="mt-10 flex items-center gap-x-6">
@@ -106,4 +101,4 @@ const BillsPayment = () => {
   );
 };
 
-export default BillsPayment;
+export default Send;
