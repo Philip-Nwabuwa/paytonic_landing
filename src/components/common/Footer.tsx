@@ -98,7 +98,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-gray-900 mb-[120px] max-width rounded-3xl"
+      className="bg-gray-900 max-width rounded-t-3xl"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">

@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Button } from "@/components/common/Button";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
 
-
-const Steps = () => {
+const Facts = () => {
   return (
     <section className="max-width bg-white text-center p-10 lg:p-16 rounded-3xl">
       <ScrollAnimate>
         <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl gradient-text">
-          Easy Steps to Pay Your Bills
+          Streamline your inventory management with Paytonic&apos;s Point of
+          Sale
         </h2>
       </ScrollAnimate>
       <ScrollAnimate>
@@ -24,37 +24,41 @@ const Steps = () => {
         <div className="flex flex-col gap-10">
           <ScrollAnimate>
             <h4 className="text-xl font-black pb-4">
-              Step 1: Select Bill Type
+              Analyze your sales data effortlessly using Paytonic&apos;s Point
+              of Sale
             </h4>
             <p className="text-gray-500">
-              Choose the type of bill you want to pay from the available
-              options.
+              Efficiently manage your inventory and track sales performance with
+              Paytonic&apos;s Point of Sale feature.
             </p>
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
           <h4 className="text-xl font-black pb-4">
-            Step 2: Enter Bill Details
+            Enable multi-user access for your business with Paytonic&apos;s
+            Point of Sale
           </h4>
           <p className="text-gray-500">
-            Provide the necessary details for the bill payment, such as the bill
-            amount and account number.
+            Collaborate with your team and grant them access to the Point of
+            Sale feature in Paytonic.
           </p>
         </ScrollAnimate>
         <div className="flex flex-col gap-10">
           <ScrollAnimate>
             <h4 className="text-xl font-black pb-4">
-              Step 3: Review and Confirm
+              Effortlessly manage your sales and inventory with Paytonic&apos;s
+              Point of Sale
             </h4>
             <p className="text-gray-500">
-              Double-check the entered information and confirm the payment.
+              Simplify your business operations by using Paytonic&apos;s Point
+              of Sale feature for seamless sales and inventory management.
             </p>
           </ScrollAnimate>
         </div>
       </div>
       <div className="mt-16 flex items-center justify-center gap-x-6">
         <Link href="#">
-          <Button intent="primary">Pay bills</Button>
+          <Button intent="primary">Get POS</Button>
         </Link>
         <Link href="#">
           <Button intent={"outlined"} className="flex items-center gap-2">
@@ -66,4 +70,4 @@ const Steps = () => {
   );
 };
 
-export default Steps;
+export default Facts;
