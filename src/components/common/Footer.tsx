@@ -10,13 +10,13 @@ const navigation = {
     { name: "POS", href: "/pos" },
   ],
   Resources: [
-    { name: "FAQS", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Contact Us", href: "#" },
+    // { name: "FAQS", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
   ],
   company: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
+    { name: "Privacy Policy", href: "/cookie" },
+    { name: "Terms & Conditions", href: "/terms" },
   ],
   social: [
     {
