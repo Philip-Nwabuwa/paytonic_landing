@@ -24,7 +24,11 @@ const Manage = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={aboutImage} alt="Bills" className="w-full h-full" />
+          <Image
+            src={aboutImage}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { Button } from "@/components/common/Button";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
 import bill1 from "@/assets/images/bill1.jpg";
 import bill2 from "@/assets/images/bills3.jpg";
+import bill3 from "@/assets/images/bills2.jpg";
 
 const Services = () => {
   return (
@@ -35,7 +36,7 @@ const Services = () => {
           />
         </ScrollAnimate>
       </div>
-      <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
+      <div className="bg-white grid lg:grid-cols-2 items-center gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
           <Image
             src={bill2}
@@ -57,7 +58,7 @@ const Services = () => {
           </ScrollAnimate>
         </div>
       </div>
-      <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
+      <div className="bg-white grid lg:grid-cols-2 items-center gap-10 p-10 lg:p-16 rounded-3xl">
         <div>
           <ScrollAnimate>
             <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-5xl gradient-text">
@@ -73,7 +74,11 @@ const Services = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image
+            src={bill3}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
       </div>
     </section>
