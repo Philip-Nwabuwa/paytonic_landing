@@ -4,8 +4,8 @@ import { Button } from "@/components/common/Button";
 import { MoveRight } from "lucide-react";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
 import Image from "next/image";
-import Security from "@/assets/images/Home/Cybersecurity.svg";
-import Bills from "@/assets/images/Home/Electronic-invoice.svg";
+import Security1 from "@/assets/images/security1.jpg";
+import Bills1 from "@/assets/images/bill1.jpg";
 
 const BillsPayment = () => {
   return (
@@ -53,12 +53,20 @@ const BillsPayment = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={Bills} alt="Bills" className="w-full h-full" />
+          <Image
+            src={Bills1}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
       </div>
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <Image src={Security} alt="Bills" className="w-full h-full" />
+          <Image
+            src={Security1}
+            alt="Bills"
+            className="w-full h-full rounded-3xl"
+          />
         </ScrollAnimate>
         <div>
           <ScrollAnimate>

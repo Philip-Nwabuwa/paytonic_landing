@@ -1,8 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
-import { MoveRight } from "lucide-react";
 
-import { Button } from "@/components/common/Button";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
 
 const Manage = () => {

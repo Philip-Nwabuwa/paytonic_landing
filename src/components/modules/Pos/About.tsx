@@ -4,6 +4,8 @@ import { MoveRight } from "lucide-react";
 
 import { Button } from "@/components/common/Button";
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
+import pos1 from "@/assets/images/pos1.jpg";
+import pos2 from "@/assets/images/pos2.jpg";
 
 const About = () => {
   return (
@@ -53,12 +55,12 @@ const About = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image src={pos1} alt="Bills" className="w-full h-full" />
         </ScrollAnimate>
       </div>
       <div className="bg-white grid lg:grid-cols-2 gap-10 p-10 lg:p-16 rounded-3xl">
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image src={pos2} alt="Bills" className="w-full h-full" />
         </ScrollAnimate>
         <div>
           <ScrollAnimate>
