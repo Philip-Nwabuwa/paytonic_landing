@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ScrollAnimate } from "@/components/common/ScrollAnimate";
+import aboutImage from "@/assets/images/about.jpg";
 
 const Manage = () => {
   return (
@@ -23,7 +24,7 @@ const Manage = () => {
           </ScrollAnimate>
         </div>
         <ScrollAnimate>
-          <Image src={""} alt="Bills" className="w-full h-full" />
+          <Image src={aboutImage} alt="Bills" className="w-full h-full" />
         </ScrollAnimate>
       </div>
     </section>
